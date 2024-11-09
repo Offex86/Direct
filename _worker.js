@@ -76,7 +76,7 @@ let DLS = 8;
 let FileName = 'edgetunnel';
 let BotToken ='7617708094:AAGRm0_Iycsx-3EaF8CPDuXbhJp8uZPfhHY';
 let ChatID ='6572636566'; 
-let proxyhosts = [ed774cc6.direct-cz9.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c40];//本地代理域名池
+let proxyhosts = [];//本地代理域名池
 let proxyhostsURL = 'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/proxyhosts';//在线代理域名池URL
 let RproxyIP = 'true';
 let httpsPorts = ["2053","2083","2087","2096","8443"];
@@ -141,7 +141,7 @@ export default {
 					let e = err;
 					console.log(e.toString());
 					RproxyIP = env.RPROXYIP || !proxyIP ? 'true' : 'false';
-					enableSocks = false;
+					enableSocks = true;
 				}
 			} else {
 				RproxyIP = env.RPROXYIP || !proxyIP ? 'true' : 'false';
